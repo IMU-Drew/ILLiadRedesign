@@ -1,0 +1,104 @@
+#pageMargins
+{
+ border: 0;
+}
+
+#page 
+{
+  width: auto;
+  border: 0;
+}
+
+#left 
+{
+  display: none;
+}
+
+#right 
+{
+  display: none;
+}
+
+#main 
+{
+  width: auto;
+}
+
+#mainContent 
+{
+ padding: 0 2px;
+}
+
+body
+{
+  color: #031C35;
+  width: auto; 
+  text-align: center;
+  font-size: .95em;
+  font-family: verdana,arial,tahoma,sans-serif;
+}
+
+hr
+{
+  display: none;
+}
+
+#header
+{
+	display: none;
+	/*
+  color: #053868;
+  font-size: 2em;
+  position: relative;
+  font-weight: bold;
+*/
+}
+
+#footer
+{
+  text-align: center;
+  padding: 15px;  
+}
+
+
+#main 
+{
+  margin-left: 0;
+  margin-right: 0; 
+}
+
+#copyright
+{
+  font-size: .85em;
+  color: #046380;
+}
+
+#copyright a
+{
+  text-decoration: none;
+  color: #053868;
+}
+
+.ExportOptionsTable, .ChartOptionsPanel
+{
+	display: none;
+}
+
+.PrintingReportTitle
+{	
+	color:#990000;
+	font-size:16pt;
+	vertical-align:middle;
+}
+
+.ParameterResultsTable th
+{
+	display: none;
+}
+
+.ParameterResultsTable td
+{
+	text-align: right;
+	padding-left: 8px;
+	padding-right: 8px;
+}

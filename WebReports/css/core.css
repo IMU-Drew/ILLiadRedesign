@@ -1,0 +1,405 @@
+/*
+LEGAL
+=====
+Copyright © 2011 Atlas Systems, Inc. http://www.atlas-sys.com
+*/
+
+/* import core layout styles */
+@import url("print.css") print;
+
+/* General */
+
+body
+{
+	/* Centers the inherited page with its width constraints defined in #pageMargins of coreLayout */
+	text-align: center;	
+	width: auto;
+	
+	/* Blue backround with textured diagonal for the surrounding area of the page */
+	/*background: #2B85BB url(images/diagonal.png) repeat;*/
+	background-color: #336699;
+	
+	/* Font used throughout the design */
+	color: #031C35;
+	font-family: verdana,arial,tahoma,sans-serif;
+	font-size: .8em;	 
+}
+
+#pageMargins 
+{
+  text-align: left;
+  min-width: 975px;  
+  max-width: 975px;  
+  width: 975px;
+  width: auto;
+  margin: auto;  
+  position: relative;
+}
+
+#left
+{
+	float: left;
+}
+
+#right
+{	
+	float: right;
+}
+
+#main
+{
+	
+}
+
+.clear
+{
+	clear: both;
+}
+
+#leftContent, #mainContent, #rightContent
+{
+	margin: .3em;
+}
+
+/* Show only to IE PC \*/
+* html h1 {height: 1%;} /* For IE 5 PC */
+
+#footer
+{
+	clear: left;
+    text-align: center;
+	padding: 1em;
+}
+
+
+.button
+{
+	background-color: #DCDCDC;
+	color: #000000;
+	border: 1px solid #9F9F9F;
+}
+
+code
+{
+ font-size: 1.1em;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  color: #053868;
+}
+
+li
+{
+  list-style-type: square;
+  list-style-position: outside;
+  color: #2B85BB;
+}
+
+/* Copyright Notice */
+#copyright
+{
+  font-size: .85em;
+  color: #046380;
+}
+
+/* defines a different style for links within the copyright notice */
+#copyright a
+{
+  text-decoration: none;
+  background-color: inherit;
+  color: #053868;  
+}
+
+/* defines a different style for link hovering within the copyright notice */
+#copyright a:hover
+{  
+  background-color: inherit; 
+  color: #046380;  
+  font-style: italic;
+}
+
+/* Links within MenuBoxes/ContainerBoxes */
+.menuPanel  a, .menuPanel ul li a, 
+.containerPanel a, .containerPanel ul li a,
+.menuPanel ul.menuOptions li a
+{
+  text-decoration: none;  
+  color: #2B85BB;
+}
+
+hr
+{ 
+	display: inline;
+	border-style: none;
+	border-top: 1px dotted #2B85BB;
+	border-bottom: 1px solid #053868; 
+	width: 90%;	
+	height: .25em;
+}
+
+img 
+{
+	border:none
+}
+
+a
+{
+	color: #053868;
+}
+
+a:hover
+{
+	color: #046380;  
+}
+
+a[disabled="disabled"] 
+{
+	color:#999999
+}
+
+/* Status Messages */
+.warning
+{
+	color: #FF6600;
+}
+
+.subdued 
+{
+	color:#999999;
+}
+
+.error 
+{
+	color:#CC0000;
+}
+
+.success 
+{
+	color:#053868;
+}
+
+.failure 
+{
+	color:#CC0000;
+    font-weight: bold;
+}
+
+.caption
+{
+	color: #999999;
+	font-size: 11px
+}
+
+/* Forms */
+.form
+{
+	border: 0px;
+	margin: 0;
+	width: 100%;
+}
+
+.form fieldset
+{
+	margin: 0;
+	border: 0;	
+}
+
+.form fieldset label
+{
+	float: left;	
+	width: 120px;
+	font-weight: bold;
+}
+
+.form input, .form textarea
+{
+	width: 180px;
+    margin-bottom: 5px;
+}
+
+.form textarea
+{
+	width: 250px;
+	height: 150px;
+}
+
+.form .boxes
+{
+	width: 1em;
+}
+
+.form .req
+{
+	color:#CC0000;
+    font-weight: bold;
+}
+
+.form .submitButton
+{
+
+	clear: left;
+	float: left;
+	width: 90px;
+}
+
+.form br
+{
+	clear: left;
+}
+
+/************************************/
+/*       pageContainer              */
+/************************************/
+
+.pageContainer
+{ 
+	background-color: #FFFFFF; 
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.pageContainerHeader
+{
+	background-color: #F9F9F9;
+	padding: 0;
+	margin: 0;
+	width: 100%;	
+}
+
+.pageContainerHeaderLeft
+{     
+	float: left;
+	background: url(images/page_left.gif) top left no-repeat;
+	width: 12px;
+	margin: 0;
+}
+
+.pageContainerHeaderRight
+{     
+	float: right;
+	background: url(images/page_right.gif) top right no-repeat;
+	width: 13px;
+	margin: 0;
+}
+
+.pageContainerHeaderText
+{
+	margin: 0px 13px 0px 12px;	
+	color: #FFFFFF;
+    padding: 5px;    
+}
+
+
+.pageContainerContent
+{
+    background-color: #FFFFFF;    
+    border-top: #336699 1px solid;
+    border-left: #F9F9F9 1px solid;
+    border-right: #F9F9F9 1px solid;
+    border-bottom: #F9F9F9 1px solid;
+    
+}
+
+/************************************/
+/*       menuContainer              */
+/************************************/
+
+.menuContainer
+{ 
+	margin: 0px 0px 5px 0px;
+	padding: 0;
+	width: 100%;
+}
+
+.menuContainerHeader
+{
+	background-color: #336699;
+	padding: 0;
+	margin: 0;
+	width: 100%;	
+}
+
+.menuContainerHeaderLeft
+{     
+	float: left;
+	background: url(images/menu_left.gif) top left no-repeat;
+	width: 12px;
+	margin: 0;
+}
+
+.menuContainerHeaderRight
+{     
+	float: right;
+	background: url(images/menu_right.gif) top right no-repeat;
+	width: 13px;
+}
+
+.menuContainerHeaderText
+{
+	color: #FFFFFF;
+    padding: 5px;    
+}
+
+
+.menuContainerContent
+{
+    background-color: #FFFFFF;
+    padding: 5px 5px 5px 5px;     
+    border: #336699 1px solid;
+    display: inline-block;
+}
+
+.menuContainerContent a
+{
+	text-decoration: none;
+}
+
+
+/************************************/
+/*       container              */
+/************************************/
+
+.container
+{ 
+	margin: 0px 0px 5px 0px;
+	padding: 0;
+	width: 100%;	
+}
+
+.containerHeader
+{
+	background-color: #DCDCDC;
+	padding: 0;
+	margin: 0;
+	width: 100%;	
+}
+
+.containerHeaderLeft
+{     
+	float: left;
+	background: url(images/container_left.gif) top left no-repeat;
+	width: 12px;
+	margin: 0;
+}
+
+.containerHeaderRight
+{     
+	float: right;
+	background: url(images/container_right.gif) top right no-repeat;
+	width: 13px;
+}
+
+.containerHeaderText
+{
+	color: #031C35;
+    padding: 5px;    
+}
+
+.containerContent
+{
+    background-color: #FFFFFF;
+    padding: 5px 5px 5px 5px;     
+    border: #DCDCDC 1px solid;
+}

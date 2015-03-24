@@ -1,0 +1,274 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="FORMATTER" content="Microsoft FrontPage 2.0">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (WinNT; U) [Netscape]">
+   <title>New User Registration</title>
+</head>
+<body bgcolor="#FFFFFF" background="file:////illserver/c$/Inetpub/wwwroot/illiad/sandston.jpg">
+<form action="illiad.dll" method="POST"><input type="hidden" name="ILLiadForm" value="Registration">
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td WIDTH="75%" BGCOLOR="#000080"><img SRC="file:////illserver/c$/Inetpub/wwwroot/illiad/user.gif" height=32 width=32><font face="Arial"><font color="#FFFFFF"><font size=+2>New
+User Registration for ILLiad</font></font></font></td>
+
+<td ALIGN=CENTER WIDTH="25%" BGCOLOR="#000080"><img SRC="file:////illserver/c$/Inetpub/wwwroot/illiad/logon.gif" height=32 width=32><input type="submit"
+            name="SubmitButton" value="Exit ILLiad System"></td>
+</tr>
+</table>
+
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td VALIGN=TOP WIDTH="10%" BGCOLOR="#C0C0C0"><b><font face="Arial">Status</font></b></td>
+
+<td WIDTH="90%" BGCOLOR="#C0C0C0"><i><font face="Arial">CGIFN=^StatusLine^</font></i></td>
+</tr>
+</table>
+
+<table BORDER=0 CELLPADDING=6 WIDTH="100%" >
+<tr>
+<td ALIGN=CENTER WIDTH="5%"><font size=-2>CGIFN=^VARERRORFirstName^</font></td>
+
+<td WIDTH="50%">First Name <i><font color="#FF0000">(required)</font></i></td>
+
+<td WIDTH="45%"><input type="text" size="40"
+            name="FirstName" value="CGIFN=^VARFirstName^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORLastName^</font></td>
+
+<td>Last Name <i><font color="#FF0000">(required)</font></i></td>
+
+<td><input type="text" size="40" name="LastName"
+            value="CGIFN=^VARLastName^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORSSN^</font></td>
+
+<td>ID Number <i><font color="#FF0000">(required)</font></i></td>
+
+<td><input type="text" size="15" name="SSN" MAXLENGTH="9"
+            value="CGIFN=^VARSSN^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORNotifyGroup^</font></td>
+
+<td>Preferred Notification Method</td>
+
+<td><select name="NotifyGroup" size="1"><option selected>CGIFN=^VARNotifyGroup^</option><option>Phone</option><option>E-Mail</option></select></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERROREMailAddress^</font></td>
+
+<td>E-Mail Address <font color="#FF0000">(required)</font></td>
+
+<td><input type="text" size="20" name="EMailAddress"
+            value="CGIFN=^VAREMailAddress^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORPhone^</font></td>
+
+<td>Daytime Phone <font color="#FF0000">(required)</font></td>
+
+<td><input type="text" size="20" name="Phone"
+            value="CGIFN=^VARPhone^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORDeliveryGroup^</font></td>
+
+<td>Preferred Article Delivery Method ("Mail to Address" available only
+to Faculty and Distance Ed.)</td>
+
+<td><select name="DeliveryGroup" size="1"><option selected>CGIFN=^VARDeliveryGroup^</option><option>Hold
+for Pickup</option><option>Mail to Address&nbsp;</option></select></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORLoanDeliveryGroup^</font></td>
+
+<td>Preferred Loan Delivery Method
+<br>("Mail to Address" available only to Distance Ed.)</td>
+
+<td><select name="LoanDeliveryGroup" size="1"><option selected>CGIFN=^VARLoanDeliveryGroup^</option><option>Hold
+for Pickup</option><option>Mail to Address</option></select></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORWebDeliveryGroup^</font></td>
+
+<td>Preferred Electronic Delivery if Possible (pdf file via web)</td>
+
+<td><select name="WebDeliveryGroup" size="1"><option selected>CGIFN=^VARWebDeliveryGroup^</option><option>Yes</option><option>No</option></select></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORAddress^</font>
+<br><font size=-2>CGIFN=^VARERRORAddress2^</font></td>
+
+<td>Mailing Address <font color="#FF0000">(required)</font></td>
+
+<td><input type="text" size="20"
+            name="Address"
+            value="CGIFN=^VARAddress^">
+<br><input type="text" size="20"
+            name="Address2"
+            value="CGIFN=^VARAddress2^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORCity^</font>
+<br><font size=-2>CGIFN=^VARERRORState^</font>
+<br><font size=-2>CGIFN=^VARERRORZip^</font></td>
+
+<td>City, State and Zip <font color="#FF0000">(required)</font></td>
+
+<td><input type="text" size="20"
+            name="City"
+            value="CGIFN=^VARCity^"><input type="text" size="2" MAXLENGTH="2" name="State"
+            value="CGIFN=^VARState^"><input type="text" size="10" MAXLENGTH="10"
+            name="Zip"
+            value="CGIFN=^VARZip^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORSAddress^</font>
+<br><font size=-2>CGIFN=^VARERRORSAddress2^</font></td>
+
+<td><b>Campus Box Address </b>(Alternate Mailing Location)</td>
+
+<td><input type="text" size="20"
+            name="Address"
+            value="CGIFN=^VARSAddress^">
+<br><input type="text" size="20"
+            name="Address2"
+            value="CGIFN=^VARSAddress2^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORSCity^</font>
+<br><font size=-2>CGIFN=^VARERRORSState^</font>
+<br><font size=-2>CGIFN=^VARERRORSZip^</font></td>
+
+<td>City, State and Zip</td>
+
+<td><input type="text" size="20"
+            name="City"
+            value="CGIFN=^VARSCity^"><input type="text" size="2" MAXLENGTH="2" name="State"
+            value="CGIFN=^VARSState^"><input type="text" size="10" MAXLENGTH="10"
+            name="Zip"
+            value="CGIFN=^VARSZip^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORStatus^</font></td>
+
+<td>Status <font color="#FF0000">(required)</font></td>
+
+<td><select name="StatusGroup" size="1"><option selected>CGIFN=^VARStatusGroup^</option><option>Faculty</option><option>Staff</option><option>Graduate</option><option>Undergraduate</option><option>Distance
+Ed</option><option>Alumni, Active</option></select></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORDepartment^</font></td>
+
+<td>Department <font color="#FF0000">(required)</font></td>
+
+<td><select name="Department" size="1"><option selected>CGIFN=^VARDepartment^</option><option>Art</option><option>Math</option><option>Music</option><option>Physics</option><option>Other
+- Unlisted</option></select></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORAuthorizedUsers^</font></td>
+
+<td>Authorized Users - List the full names of anyone you wish to be allowed
+to pick up your ILL items. <u>An ID will be REQUIRED to pick items up.</u></td>
+
+<td><textarea name="AuthorizedUsers" rows="2"
+            cols="23">CGIFN=^VARAuthorizedUsers^</textarea></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORNVTGC^</font></td>
+
+<td>Delivery Location</td>
+
+<td><select name="NVTGC" size="1"><option selected>CGIFN=^VARNVTGC^</option><option value="ILL">ILL
+Office</option></select></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORUsername^</font></td>
+
+<td>Choose a Username<i><font color="#FF0000"> (required, case sensitive)</font></i></td>
+
+<td><input type="text" size="20" name="Username"
+            value="CGIFN=^VARUsername^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORPassword1^</font></td>
+
+<td>Choose a Password <i><font color="#FF0000">(required, case sensitive)</font></i></td>
+
+<td><input type="password" size="20" name="Password1"
+            value="CGIFN=^VARPassword1^"></td>
+</tr>
+
+<tr>
+<td ALIGN=CENTER><font size=-2>CGIFN=^VARERRORPassword2^</font></td>
+
+<td>Re-enter password <i><font color="#FF0000">(required, case sensitive)</font></i></td>
+
+<td><input type="password" size="20" name="Password2"
+            value="CGIFN=^VARPassword2^"></td>
+</tr>
+</table>
+
+<hr>
+<table BORDER=0 CELLPADDING=6 WIDTH="100%" >
+<tr>
+<td WIDTH="5%"></td>
+
+<td WIDTH="50%"><b><font face="Arial"><font color="#000000"><font size=-1>Press
+this button to Register with ILLiad.</font></font></font></b></td>
+
+<td ALIGN=CENTER WIDTH="45%"><img SRC="file:////illserver/c$/Inetpub/wwwroot/illiad/Submit.gif" height=32 width=32>
+<br><input type="submit" name="SubmitButton"
+            value="Submit Information"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><b><font face="Arial"><font color="#000000"><font size=-1>Press this
+button to clear all entries on this form and start over.</font></font></font></b></td>
+
+<td ALIGN=CENTER><img SRC="file:////illserver/c$/Inetpub/wwwroot/illiad/Clear.gif" height=32 width=32>
+<br><input type="reset" name="ClearButton"
+            value="Clear Form"></td>
+</tr>
+
+<tr>
+<td></td>
+
+<td><b><font face="Arial"><font color="#000000"><font size=-1>Press this
+button to exit the system, discarding any changes.</font></font></font></b></td>
+
+<td ALIGN=CENTER><img SRC="file:////illserver/c$/Inetpub/wwwroot/illiad/Cancel2.gif" height=32 width=32>
+<br><input type="submit" name="SubmitButton"
+            value="Cancel - Exit ILLiad System"></td>
+</tr>
+</table>
+</form>
+<hr>
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

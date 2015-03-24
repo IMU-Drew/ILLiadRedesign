@@ -1,0 +1,307 @@
+#pageMargins 
+{
+  text-align: left;
+  min-width: 100%;  
+  max-width: 100%;  
+  width: 100%;
+}
+
+.MenuBarItems
+{
+	background-color: #F7F7F7;
+}
+
+.MenuBarSubItems
+{
+	background-color: #F7F7F7;	
+}
+
+.MenuBarSubMenus
+{
+	
+}
+
+
+.ParameterRequestTable
+{	
+	background-color:#F7F7F7;
+	border: 1px solid black;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ParameterRequestTable td
+{
+	padding:0px;	
+	padding-left: 0px;
+	margin:0px;
+}
+
+.ParameterRequestRow
+{
+	
+}
+
+.field
+{
+	padding-left:7px;
+}
+
+.ParameterRequestInnerTable
+{
+	background-color:#F7F7F7;
+	width: 60%;
+	text-align: left;
+}
+
+.ParameterRequestInnerTable td
+{
+	
+}
+
+.ParameterRequestInnerTable th
+{
+	background-color:#CCCCCC;
+	font-weight: bold;
+}
+
+.ParameterRequestInnerTableAltRow
+{
+	background-color: #F7F7F7;
+}
+
+.ParameterResultsTable
+{
+	background-color:#F7F7F7;
+	border: 1px solid black;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.OverflowContainerDiv
+{
+	width: 100%;	
+	padding-bottom: 16px;
+}
+
+.ReportTitle
+{
+	font-weight:bold;
+	background-color: #B0C4DE;
+	color:black;
+	padding-left:7px;
+	font-size:13pt;
+	margin: 0;
+}
+
+.PrintingReportTitle
+{
+	display: none;	
+}
+
+.ReportResultsTable
+{
+width: 100%;
+}
+
+.ReportResultsTableHeader
+{
+font-weight:bold;
+background-color: #B0C4DE;
+}
+
+.ReportResultsTableAlternatingRow
+{
+	background-color: #E0EAEF;
+}
+
+.ReportResultsTableTitle
+{
+background-color:#000066;
+font-size:10pt;
+color:white;
+}
+
+.TabPageActiveTab
+{
+background-color: #B0C4DE;
+}
+
+.TabPageTab
+{
+
+}
+
+.ChartOptionsPanel
+{
+width:100%;
+margin: 0;
+padding: 0;
+}
+
+.ChartOptionsTable
+{
+	width:100%;
+	border: 1px solid black;
+	margin: 0;
+	background-color:#F7F7F7;
+}
+
+.ChartOptionsHeader
+{
+font-weight:bold;
+background-color: #B0C4DE;
+color:black;
+padding-left:7px;
+font-size:9pt;
+margin: 0;
+}
+
+.ChartOptionsBody
+{
+padding:7px;
+height:auto;
+margin: 0;
+border-style: none;
+}
+
+.ChartOptionsContentsTable
+{
+width:100%;
+height:auto;
+}
+
+.ExportOptionsTable
+{
+	width:100%;
+	border: 1px solid black;
+	margin: 0;
+	background-color:#F7F7F7;
+}
+
+.ExportOptionsHeader
+{
+font-weight:bold;
+background-color: #B0C4DE;
+color:black;
+padding-left:7px;
+font-size:9pt;
+margin: 0;
+}
+
+.ExportOptionsDescText
+{
+	font-size:smaller;
+}
+
+.ExportOptionsBody
+{
+padding:7px;
+height:auto;
+margin: 0;
+border-style: none;
+}
+
+.ExportChartsButton
+{
+
+}
+
+.ExportChartsButtonLong
+{
+
+}
+
+
+
+
+.UpdateProgressDiv 
+{
+width: 30%; height: 60px; background-color: #F7F7F7;
+position: absolute; top: 35em; left: 35%;
+text-align:center;
+vertical-align:middle;
+border:1px solid black;
+font-weight:bold;
+}
+
+.MenuBlockWithDescriptions
+{
+width: 100%;
+}
+
+.LoginContent
+{
+width:90%;
+position:relative;
+left:5%;
+border:none;
+height:20em;
+}
+
+.LoginControl
+{
+	width: 80%;
+
+	margin-left:auto;
+	margin-right: auto;
+	margin-top:2%;
+}
+
+.LoginControlButton
+{
+	width: 50%;
+	text-align:center;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 1em;
+}
+
+.LoginControlInputCells
+{
+	width:14em;
+}
+
+.LoginControlInputBox
+{
+	width:98%;
+}
+
+.LoginControlTitle
+{
+	color:#990000;
+	font-size:16pt;
+	vertical-align:top;
+	border-bottom: 3px solid #FFFFFF;
+	padding-bottom: .5em;
+}
+
+.menuContainerHeaderText a
+{
+	color:  White;
+	text-decoration: none;
+}
+
+.menuContainerHeaderText a:hover
+{
+	color: Silver;
+}
+
+.menuContainerContent a
+{
+	display:block;
+	margin-left:1em;
+	margin-right:1em;
+	padding-top:.2em;
+	padding-bottom:.2em;
+}
+
+.pageContainerHeader .pageContainerHeaderText a
+{
+	text-decoration: none;
+	color: #053868;
+}
+ 
+ 

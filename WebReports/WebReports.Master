@@ -1,0 +1,336 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebReports.master.cs" Inherits="WebReports.WebReports" %>
+
+<%@ Register assembly="DevExpress.Web.v11.2, Version=11.2.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxMenu" tagprefix="dxm" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>ILLiad Reports</title>
+    <link rel="stylesheet" type="text/css" href="css/1col.css" media="screen" />    
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
+    <![endif]-->
+    
+    <script type="text/javascript">
+        var isFirstLoad = true;
+        
+        if (document.getElementById("ChartOptionsDiv") != null && isFirstLoad) {
+            document.getElementById("ChartOptionsDiv").style.visibility = "hidden";
+        }
+        
+        if (document.getElementById("ExportOptionsTable") != null && isFirstLoad) {
+            document.getElementById("ExportOptionsTable").style.visibility = "hidden";
+        }
+    
+        function JSPrintPage()
+        {
+            window.print();
+        }
+        
+        function SetReportOptionVisibility()
+        {
+            if (document.getElementById("ChartOptionsDiv") != null) {
+                document.getElementById("ChartOptionsDiv").style.visibility = "Visible";
+            }
+            
+            if (document.getElementById("ExportOptionsTable") != null) {
+                document.getElementById("ExportOptionsTable").style.visibility = "Visible";
+            }
+        }
+    </script>
+</head>
+<body onload="SetReportOptionVisibility()">
+<div id="pageMargins">
+
+<div id="page" class="pageContainer">
+    <form id="form1" runat="server">
+    
+    <!-- Page Header -->
+    <div id="header" class="pageContainerHeader"> 
+        <!-- Do NOT change where LEFT, RIGHT & TEXT is located within the page due to float positions -->
+        <div class="pageContainerHeaderLeft">&nbsp;</div>
+        <div class="pageContainerHeaderRight">&nbsp;</div>
+        <div class="pageContainerHeaderText">
+      		<h2><a runat="server" href="Default.aspx">ILLiad Reports</a></h2>
+            <p>
+                <dxm:ASPxMenu ID="ASPxMenu1" runat="server" AllowSelectItem="True">
+                    <SubMenuStyle CssClass="MenuBarSubMenus" GutterWidth="0px" />
+                    <ItemStyle CssClass="MenuBarItems" />
+                    <SubMenuItemStyle CssClass="MenuBarSubItems">
+                    </SubMenuItemStyle>
+                    <Items>
+                        <dxm:MenuItem NavigateUrl="~/Borrowing/Default.aspx" Text="Borrowing">
+                            <Items>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/FillRateStatistics.aspx" 
+                                    Text="Fill Rate Statistics">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/MostRequestedJournals.aspx" 
+                                    Text="Most Requested Journals">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/MostRequestedLoans.aspx" 
+                                    Text="Most Requested Loans">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/RegisteredUsersByDepartment.aspx" 
+                                    Text="Registered Users by Department">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/RequestsReceivedByDay.aspx" 
+                                    Text="Requests Received by Day">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/RequestsSentByDay.aspx" 
+                                    Text="Requests Sent by Day">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/RequestsSentByHour.aspx" 
+                                    Text="Requests  Sent by Hour">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/RequestsByDepartment.aspx" 
+                                    Text="Requests by Department">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/RequestsByDepartmentAndUserStatus.aspx" 
+                                    Text="Requests by Department and User Status">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/RequestsFinished.aspx" 
+                                    Text="Requests Finished">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/RequestsFinishedAndCancelled.aspx" 
+                                    Text="Requests Finished and Cancelled">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/TurnaroundTime.aspx" 
+                                    Text="Turnaround Time">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/ElecDelTurnaroundTime.aspx" 
+                                    Text="Electronic Delivery Turnaround Time">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/DeliveryTimeDistribution.aspx" 
+                                    Text="Delivery Time Distribution">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/WhoWeBorrowFrom.aspx" 
+                                    Text="Who We Borrow From">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/JournalsReceived.aspx" 
+                                    Text="Journals Received">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Borrowing/WorldCatInformation.aspx" 
+                                    Text="WorldCat Information">
+                                </dxm:MenuItem>
+                            </Items>
+                        </dxm:MenuItem>
+                        <dxm:MenuItem NavigateUrl="~/Lending/Default.aspx" Text="Lending">
+                            <Items>
+                                <dxm:MenuItem NavigateUrl="~/Lending/FillRateStatistics.aspx" 
+                                    Text="Fill Rate Statistics">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/WhoWeLendTo.aspx" Text="Who We Lend To">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/RequestsReceivedByDay.aspx" 
+                                    Text="Requests Received by Day">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/RequestsReceivedBySystemID.aspx" 
+                                    Text="Requests Received by System ID">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/RequestsFilledByDay.aspx" 
+                                    Text="Requests Filled by Day">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/RequestsFilledAndUnfilled.aspx" 
+                                    Text="Requests Filled and Unfilled">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/MostLoanedJournals.aspx" 
+                                    Text="Most Loaned Journals">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/MostLoanedMonographs.aspx" 
+                                    Text="Most Loaned Monographs">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/MostUnfilledJournals.aspx" 
+                                    Text="Most Unfilled Journals">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/TurnaroundTime.aspx" 
+                                    Text="Turnaround Time">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/RequestsFromLendingWeb.aspx" 
+                                    Text="Requests From Lending Web Page">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Lending/IFMCharges.aspx" Text="IFM Charges">
+                                </dxm:MenuItem>
+                            </Items>
+                        </dxm:MenuItem>
+                        <dxm:MenuItem NavigateUrl="~/DocumentDelivery/Default.aspx" 
+                            Text="Document Delivery">
+                            <Items>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/FillRateStatistics.aspx" 
+                                    Text="Fill Rate Statistics">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/MostFilledJournals.aspx" 
+                                    Text="Most Filled Journals">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/RequestsReceivedByDay.aspx" 
+                                    Text="Requests Received by Day">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/RequestsFilledByDay.aspx" 
+                                    Text="Requests Filled by Day">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/TurnaroundTime.aspx" 
+                                    Text="Turnaround Time">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/ElecDelTurnaroundTime.aspx" 
+                                    Text="Electronic Delivery Turnaround Time">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/RequestsByDepartmentAndUserStatus.aspx" 
+                                    Text="Requests by Department and User Status">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/CancellationReasons.aspx" 
+                                    Text="Reasons for Cancellation">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/DocumentDelivery/RequestsFinishedAndCancelled.aspx" 
+                                    Text="Requests Finished and Cancelled">
+                                </dxm:MenuItem>
+                            </Items>
+                        </dxm:MenuItem>
+                        <dxm:MenuItem NavigateUrl="~/Administrative/Default.aspx" Text="Administrative">
+                            <Items>
+                                <dxm:MenuItem NavigateUrl="~/Administrative/Copyright.aspx" Text="Copyright">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Administrative/BorrowingInvoicesReceived.aspx" 
+                                    Text="Borrowing Invoices Received">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Administrative/LendingLibrary.aspx" 
+                                    Text="Lending Library">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Administrative/CustomersCleared.aspx" 
+                                    Text="Customers Cleared">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Administrative/OutstandingRequests.aspx" 
+                                    Text="Outstanding Requests">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Administrative/RequestsByUsername.aspx" 
+                                    Text="Requests by Username">
+                                </dxm:MenuItem>
+                                <dxm:MenuItem NavigateUrl="~/Administrative/StaffActivityByUsername.aspx" 
+                                    Text="Staff Activity by Username">
+                                </dxm:MenuItem>
+                            </Items>
+                        </dxm:MenuItem>
+                    </Items>
+                </dxm:ASPxMenu>
+            </p>
+      	</div>
+  	</div>
+  	<!-- end header -->
+
+
+  	<div id="pageContent" class="pageContainerContent">
+		<div id="left">
+		    <div id="leftContent">
+            	<div class="menuContainer">
+	                <div class="menuContainerHeader"> 		
+	                    <div class="menuContainerHeaderLeft">&nbsp;</div>
+                        <div class="menuContainerHeaderRight">&nbsp;</div>
+                        <div class="menuContainerHeaderText"><a runat="server" href="~/Borrowing/Default.aspx">Borrowing Reports</a></div>            
+                    </div>
+                    
+                    <div class="menuContainerContent">
+		                <a runat="server" href="~/Borrowing/FillRateStatistics.aspx">Fill Rate Statistics</a>
+		                <a runat="server" href="~/Borrowing/MostRequestedJournals.aspx">Most Requested Journals</a>
+		                <a runat="server" href="~/Borrowing/MostRequestedLoans.aspx">Most Requested Loans</a>
+		                <a runat="server" href="~/Borrowing/RegisteredUsersByDepartment.aspx">Registered Users by Department</a>
+		                <a runat="server" href="~/Borrowing/RequestsReceivedByDay.aspx">Requests Received by Day</a>
+		                <a runat="server" href="~/Borrowing/RequestsSentByDay.aspx">Requests Sent by Day</a>
+		                <a runat="server" href="~/Borrowing/RequestsSentByHour.aspx">Requests Sent by Hour</a>
+		                <a runat="server" href="~/Borrowing/RequestsByDepartment.aspx">Requests by Department</a>
+		                <a runat="server" href="~/Borrowing/RequestsByDepartmentAndUserStatus.aspx">Requests by Department and User Status</a>
+		                <a runat="server" href="~/Borrowing/RequestsFinished.aspx">Requests Finished</a>
+		                <a runat="server" href="~/Borrowing/RequestsFinishedAndCancelled.aspx">Requests Finished and Cancelled</a>
+		                <a runat="server" href="~/Borrowing/TurnaroundTime.aspx">Turnaround Time</a>
+		                <a runat="server" href="~/Borrowing/ElecDelTurnaroundTime.aspx">Electronic Delivery Turnaround Time</a>
+		                <a runat="server" href="~/Borrowing/DeliveryTimeDistribution.aspx">Delivery Time Distribution</a>
+		                <a runat="server" href="~/Borrowing/WhoWeBorrowFrom.aspx">Who We Borrow From</a>
+		                <a runat="server" href="~/Borrowing/JournalsReceived.aspx">Journals Received</a>
+		                <a runat="server" href="~/Borrowing/WorldCatInformation.aspx">WorldCat Information</a>
+		            </div>
+		        </div>
+
+            	<div class="menuContainer">
+	                <div class="menuContainerHeader"> 		
+	                    <div class="menuContainerHeaderLeft">&nbsp;</div>
+                        <div class="menuContainerHeaderRight">&nbsp;</div>
+                        <div class="menuContainerHeaderText"><a runat="server" href="~/Lending/Default.aspx">Lending Reports</a></div>            
+                    </div>
+                    
+                    <div class="menuContainerContent">
+		                <a runat="server" href="~/Lending/FillRateStatistics.aspx">Fill Rate Statistics</a>
+		                <a runat="server" href="~/Lending/WhoWeLendTo.aspx">Who We Lend To</a>
+		                <a runat="server" href="~/Lending/RequestsReceivedByDay.aspx">Requests Received by Day</a>
+		                <a runat="server" href="~/Lending/RequestsReceivedBySystemID.aspx">Requests Received by System ID</a>
+		                <a runat="server" href="~/Lending/RequestsFilledByDay.aspx">Requests Filled by Day</a>
+		                <a runat="server" href="~/Lending/RequestsFilledAndUnfilled.aspx">Requests Filled and Unfilled</a>
+		                <a runat="server" href="~/Lending/MostLoanedJournals.aspx">Most Loaned Journals</a>
+		                <a runat="server" href="~/Lending/MostLoanedMonographs.aspx">Most Loaned Monographs</a>
+		                <a runat="server" href="~/Lending/MostUnfilledJournals.aspx">Most Unfilled Journals</a>
+		                <a runat="server" href="~/Lending/TurnaroundTime.aspx">Turnaround Time</a>
+		                <a runat="server" href="~/Lending/RequestsFromLendingWeb.aspx">Requests From Lending Web Page</a>
+		                <a runat="server" href="~/Lending/IFMCharges.aspx">IFM Charges</a>
+		            </div>
+		        </div>
+		        
+            	<div class="menuContainer">
+	                <div class="menuContainerHeader"> 		
+	                    <div class="menuContainerHeaderLeft">&nbsp;</div>
+                        <div class="menuContainerHeaderRight">&nbsp;</div>
+                        <div class="menuContainerHeaderText"><a runat="server" href="~/DocumentDelivery/Default.aspx">Document Delivery Reports</a></div>            
+                    </div>			        
+
+                    <div class="menuContainerContent">
+		                <a runat="server" href="~/DocumentDelivery/FillRateStatistics.aspx">Fill Rate Statistics</a>
+		                <a runat="server" href="~/DocumentDelivery/MostFilledJournals.aspx">Most Filled Journals</a>
+		                <a runat="server" href="~/DocumentDelivery/RequestsReceivedByDay.aspx">Requests Received by Day</a>
+		                <a runat="server" href="~/DocumentDelivery/RequestsFilledByDay.aspx">Requests Filled by Day</a>
+		                <a runat="server" href="~/DocumentDelivery/TurnaroundTime.aspx">Turnaround Time</a>
+		                <a runat="server" href="~/DocumentDelivery/ElecDelTurnaroundTime.aspx">Elec Del Turnaround Time</a>
+		                <a runat="server" href="~/DocumentDelivery/RequestsByDepartmentAndUserStatus.aspx">Requests by Department and User Status</a>
+		                <a runat="server" href="~/DocumentDelivery/CancellationReasons.aspx">Reasons for Cancellation</a>
+		                <a runat="server" href="~/DocumentDelivery/RequestsFinishedAndCancelled.aspx">Requests Finished and Cancelled</a>
+		            </div>
+		        </div>
+		        
+		        
+            	<div class="menuContainer">
+	                <div class="menuContainerHeader"> 		
+	                    <div class="menuContainerHeaderLeft">&nbsp;</div>
+                        <div class="menuContainerHeaderRight">&nbsp;</div>
+                        <div class="menuContainerHeaderText"><a id="A2" runat="server" href="~/Administrative/Default.aspx">Administrative Reports</a></div>            
+                    </div>			        
+
+                    <div class="menuContainerContent">		        
+		                <a runat="server" href="~/Administrative/Copyright.aspx">Copyright</a>
+		                <a runat="server" href="~/Administrative/BorrowingInvoicesReceived.aspx">Borrowing Invoices Received</a>
+		                <a runat="server" href="~/Administrative/LendingLibrary.aspx">Lending Library</a>
+		                <a runat="server" href="~/Administrative/CustomersCleared.aspx">Customers Cleared</a>
+		                <a runat="server" href="~/Administrative/OutstandingRequests.aspx">Outstanding Requests</a>
+		                <a runat="server" href="~/Administrative/RequestsByUsername.aspx">Requests by Username</a>			
+		                <a runat="server" href="~/Administrative/StaffActivityByUsername.aspx">Staff Activity by Username</a>
+		            </div>
+		        </div>
+	        </div>
+		</div>  	
+		
+    	<div id="main">
+    	    <div id="mainContent">
+	            <asp:ContentPlaceHolder ID="BodyPlaceholder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+    	</div>
+	</div>
+	</form>
+	
+    <!-- Page Footer -->
+    <div id="footer">              
+      <div id="copyright">
+          Copyright &copy; 2014 <a href="http://www.atlas-sys.com">Atlas Systems, Inc.</a> All Rights Reserved.
+      </div><!-- end copyright -->
+    </div> 
+
+</div><!-- end page -->
+</div><!-- end pageMargins -->
+</body>
+</html>

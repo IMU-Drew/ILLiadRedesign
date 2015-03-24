@@ -1,0 +1,33 @@
+/*
+LEGAL
+=====
+Copyright © 2011 Atlas Systems, Inc. http://www.atlas-sys.com
+*/
+
+
+/* import core styles */
+@import url("core.css");
+
+
+#left  
+{ 
+  width: 25%;
+  display: inline-block;
+}
+
+#right
+{
+  display: none;
+}
+
+#main 
+{    
+  margin-left: 25%;
+  margin-right: 0px;      	
+}
+
+
+#leftContent, #mainContent
+{
+	margin: .3em;
+}

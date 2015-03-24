@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<title>ILLiad Logon</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
+<![endif]-->
+</head>
+<body id="type-a">
+<div id="wrap">
+  <div id="header"> 
+  	<span id="site-name">ILLiad</span>
+    <div id="status">Enter your user information below.<br />
+      Then press the Logon to ILLiad button to continue.
+	 </div>
+  </div>
+  <!--<div id="warning-message" style="text-align:center;color:red"><b>Use your myBama username and password to login to ILLiad.</b></div>  -->
+  <div id="content-wrap">
+    <div id="content">
+		<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1">
+			<input type="hidden" name="ILLiadForm" value="Logon">
+			<div id="logonform">
+				<div class="req"><b>*</b> Indicates required field</div>
+				<fieldset>			
+					<h3>ILLiad Logon</h3>	
+					<div id="warning-message" style="text-align:left;color:#000000"><b>Use your myBama username and password to login to ILLiad.</b></div>  						
+					<label for="username">
+						<span class="field">
+							<span class="req">*</span>
+							<b>Username</b>
+						</span>
+						<input id="username" name="Username" type="text" class="f-name" tabindex="1" /><br />		 
+				</label>			
+					<label for="password">
+						<span class="field">
+							<span class="req">*</span>
+							<b>Password</b>
+						</span>
+						<input id="password" name="Password" type="password" class="f-name" tabindex="2" /><br />
+				</label>
+							
+					<div class="f-submit-wrap">
+						<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" tabindex="12" /><br />
+					</div>
+				</fieldset>
+			</div>
+		</form>
+	
+	
+			<div class="alertSystem">
+				<h4>What's New?</h4>
+				<p><img height="16" width="16" src="/illiad/includes/smartphone-icon.png">Interlibrary Loan notices can now be received as text messages.  For instructions, please login and click on the User Information tab on the left menu bar (new users will see the New User Registration page after login). </p>
+			</div>
+
+			
+
+		<br /><br /><br />
+		<!--<a href="FirstTime.html">First Time Users</a><br />-->
+		<!--<a href="illiad.dll?Action=10&Form=84">Forgot Password?</a><br />-->
+		<a href="http://library.ua.edu/">Libraries' Catalog</a><br />
+		<a href="http://www.lib.ua.edu/interlibloan/illfees.htm">Fines/Fees Policy for Interlibrary Loan</a>
+		<div id="footer">
+			Copyright © 1998-2011 <a href="http://www.atlas-sys.com">Atlas Systems, Inc.</a> All Rights Reserved.
+      	</div>
+    </div>    
+  </div>
+</div>
+</body>
+</html>

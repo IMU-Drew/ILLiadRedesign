@@ -1,0 +1,32 @@
+/*
+LEGAL
+=====
+Copyright © 2011 Atlas Systems, Inc. http://www.atlas-sys.com
+*/
+
+
+/* import core styles */
+@import url("core.css");
+
+
+#left  
+{ 
+  display: none;
+}
+
+#right
+{
+  width: 25%;
+}
+
+#main 
+{
+  /* margin-left should be same as left width + more if you want a noticeable margin. 
+  if "#left {display:none;}", margin-left: 0;
+  Same applies to margin-right
+  */
+  margin-left: 0;
+  margin-right: 25%; 
+  
+
+}
