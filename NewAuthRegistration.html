@@ -16,6 +16,7 @@
     <div id="content">
 		<form action="illiad.dll" method="post" name="NewAuthRegistration" class="f-wrap-request">
 			<input type="hidden" name="ILLiadForm" value="NewAuthRegistration">
+<input type="hidden" name="NVTGC" value="ILL">
 				<div class="req"><b>*</b> Indicates required field</div>
 				<fieldset>			
 					<h3>New Authenticated User Registration</h3>						
@@ -95,7 +96,8 @@
 						</select><br />
 					</label>
 					
-					<input id="WebDeliveryGroup" name="WebDeliveryGroup" type="hidden" value="Yes"><br />	
+					<input id="WebDeliveryGroup" name="WebDeliveryGroup" type="hidden" value="Yes">
+					<input id="NotifyGroup" name="NotifyGroup" type="hidden" value="E-Mail">		
 					<!--<label for="WebDeliveryGroup">
 						<span class="field">
 							<span class="<#ERROR name="ERRORWebDeliveryGroup">"><b>Preferred Electronic Delivery if Possible (PDF file via web)</b></span>
