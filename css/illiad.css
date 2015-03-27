@@ -4,3 +4,69 @@
     background-color: #993333;
     color: #f6f6f6;
 }
+
+header {
+    height: auto;
+    padding: 10px;
+    background-color: rgb(153, 51, 51);
+    color: white;
+}
+
+
+
+input[name="SubmitButton"] {
+    color: black;
+}
+
+body {
+    position: relative;
+}
+
+.nav-submenu li {
+    list-style-type: none;
+}
+
+.nav-submenu li li {
+    padding-top: .25em;
+    padding-bottom: .25em;
+}
+
+.nav-submenu li a {
+    color: #993333;
+}
+
+.nav-submenu > li > a:hover {
+    color: #ffffff;
+    background-color: #993333;
+}
+
+.nav-submenu > li li:hover {
+    color: #333333;
+    background-color: #f9f9f9;
+}
+
+.nav-submenu > li.active > ul {
+    display: block;
+}
+.nav-submenu > li > ul {
+
+}
+.nav-submenu > li > ul > li > a,
+.nav-submenu > li > ul > li a:hover {
+    padding-left: 15px;
+    border-left: 2px solid #ffffff;
+}
+.nav-submenu > li > ul > li.active > a,
+.nav-submenu > li > ul > li:hover > a,
+.nav-submenu > li > ul > li:focus > a,
+.nav-submenu > li > ul > li.active a:hover,
+.nav-submenu > li > ul > li:hover a:hover,
+.nav-submenu > li > ul > li:focus a:hover,
+.nav-submenu > li > ul > li.active a:active,
+.nav-submenu > li > ul > li:hover a:active,
+.nav-submenu > li > ul > li:focus a:active,
+.nav-submenu > li > ul > li.active a:focus,
+.nav-submenu > li > ul > li:hover a:focus,
+.nav-submenu > li > ul > li:focus a:focus {
+    border-color: #777777;
+}

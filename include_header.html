@@ -1,16 +1,18 @@
 <header class="navbar navbar-static-top navbar-ualib" role="banner">
-    <form action="illiad.dll" name="Search" method="post" class="navbar-form navbar-right">
-        <input type="hidden" name="IlliadForm" value="Search" />
-        <input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID">" />
-        <label for="SearchCriteria">
-            <input id="SearchCriteria" name="SearchCriteria" type="text" class="f-criteria" />
-        </label>
-        <input type="submit" name="SubmitButton" value="Search" class="btn btn-default f-submit" />
-        <div id="searchType">
-            <input name="SearchType" type="radio" id="SearchTypeActive" value="Active" checked class="f-searchType" /><label for="SearchTypeActive">Active</label>
-            <input name="SearchType" type="radio" id="SearchTypeAll" value="All" class="f-searchType" /><label for="SearchTypeAll">All</label>
-        </div>
-    </form>
+    <div class="form-group">
+        <form action="illiad.dll" name="Search" method="post" class="navbar-form navbar-right">
+            <input type="hidden" name="IlliadForm" value="Search" />
+            <input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID">" />
+            <label for="SearchCriteria">
+                <input id="SearchCriteria" name="SearchCriteria" type="text" class="form-control f-criteria" />
+            </label>
+            <input type="submit" name="SubmitButton" value="Search" class="btn btn-default f-submit" />
+            <div id="searchType">
+                <input name="SearchType" type="radio" id="SearchTypeActive" value="Active" checked class="f-searchType" /><label for="SearchTypeActive">Active</label>
+                <input name="SearchType" type="radio" id="SearchTypeAll" value="All" class="f-searchType" /><label for="SearchTypeAll">All</label>
+            </div>
+        </form>
+    </div>
 	<div id="title-name"><h1>University of Alabama Interlibrary Loan (ILLiad) </h2></div>
 
 
