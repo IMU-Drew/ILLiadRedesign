@@ -4,13 +4,15 @@
 <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/illiad.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!--[if lte IE 6]>
 <link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
 <![endif]-->
 </head>
 <body id="type-b">
 <div id="wrap">
-    <#INCLUDE filename="include_header_request.html">
+    <#INCLUDE filename="include_header.html">
     <div id="content-wrap">
 		<#INCLUDE filename="include_menu.html">
         <div id="content" class="col-md-6"><div id="status" class="alert alert-warning"><#STATUS></div>
@@ -20,7 +22,7 @@
                 <input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
                 <div class="req"><b>*</b> Indicates required field</div>
                 <fieldset>
-                	<h3>Loan Request (Including Multimedia)</h3>
+                	<h3>Loan Request (Including Multimedia)!</h3>
 					<#STATUS>
                 	<h2>Describe the item you want</h2>
                 	<label for="LoanAuthor">
@@ -141,5 +143,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

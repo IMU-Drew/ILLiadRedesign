@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/illiad.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!--[if lte IE 6]>
     <link rel="stylesheet" type="text/css" href="css/ie6_or_less.css" />
     <![endif]-->
