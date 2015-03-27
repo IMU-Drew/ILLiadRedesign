@@ -152,4 +152,5 @@
     </form>
 </div>
 </body>
+<script src="js/forms.js"></script>
 </html>
