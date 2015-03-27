@@ -1,4 +1,4 @@
-/*illiad.css should be included in main.css at the bottom.*/
+
 
 .jumbotron-head {
     background-color: #993333;
@@ -12,6 +12,9 @@ header {
     color: white;
 }
 
+.note {
+    font-weight: normal;
+}
 
 
 input[name="SubmitButton"] {
