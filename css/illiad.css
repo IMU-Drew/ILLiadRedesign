@@ -91,11 +91,22 @@ header label {
     border-color: #777777;
 }
 
+/*
+.alert-warning {
+    float: left;
+    width: 500px;
+}*/
+
 @media(max-width: 768px){
     header input[name="SearchType"], label[for="SearchTypeActive"], label[for="SearchTypeAll"] {
         visibility: hidden;
         position: absolute;
     }
+
+    /*
+    .alert-warning {
+        width: 100%;
+    }*/
 
     .navbar form {
         box-shadow: none;
