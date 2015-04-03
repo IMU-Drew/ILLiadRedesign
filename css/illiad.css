@@ -33,6 +33,15 @@ body {
     position: relative;
 }
 
+header label {
+    margin-bottom: 0px;
+    margin-left: 2px;
+}
+
+#searchType label {
+
+}
+
 .nav-submenu li {
     list-style-type: none;
 }
@@ -80,4 +89,24 @@ body {
 .nav-submenu > li > ul > li:hover a:focus,
 .nav-submenu > li > ul > li:focus a:focus {
     border-color: #777777;
+}
+
+@media(max-width: 768px){
+    header input[name="SearchType"], label[for="SearchTypeActive"], label[for="SearchTypeAll"] {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .navbar form {
+        box-shadow: none;
+    }
+
+    label[for="SearchCriteria"]{
+        width: 100%;
+    }
+
+    input[name="SubmitButton"]{
+        width: 50%;
+        float: right;
+    }
 }
