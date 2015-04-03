@@ -105,8 +105,16 @@ header label {
         width: 100%;
     }
 
+    nav.navbar {
+        border: 2px solid;
+        border-color: darkgrey;
+        margin: 2px;
+        margin-bottom: 5px;
+    }
+
     input[name="SubmitButton"]{
-        width: 50%;
+        width: 30%;
         float: right;
+        margin-top: 1%;
     }
 }
