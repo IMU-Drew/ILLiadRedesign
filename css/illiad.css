@@ -103,6 +103,9 @@ header label {
         position: absolute;
     }
 
+    .content-wrap .navbar {
+        width: 100%;
+    }
     /*
     .alert-warning {
         width: 100%;
@@ -124,7 +127,7 @@ header label {
     }
 
     input[name="SubmitButton"]{
-        width: 30%;
+        width: 50%;
         float: right;
         margin-top: 1%;
     }
