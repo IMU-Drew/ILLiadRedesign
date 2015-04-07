@@ -42,6 +42,10 @@ header label {
 
 }
 
+button.dropdown-toggle {
+    padding: 15px;
+}
+
 .nav-submenu li {
     list-style-type: none;
 }

@@ -20,12 +20,50 @@ $(document).ready(function(){
 
 
         if (allButFirstChild.is( ":hidden" ) && $(window).width() > 768) {
-            // if the navigation menu and nav button are both hidden,
-            // then the responsive nav is closed and the nav menu is still hidden.
-            // just display the nav menu which will auto-hide at <560px width and remove class.
            allButFirstChild.show();
         }
     });
+
+    /* from http://stackoverflow.com/questions/8584098/how-to-change-an-element-type-using-jquery */
+    $.fn.changeElementType = function(newType) {
+        var newElements = [];
+
+        $(this).each(function() {
+            var attrs = {};
+
+            $.each(this.attributes, function(idx, attr) {
+                attrs[attr.nodeName] = attr.nodeValue;
+            });
+
+            var newElement = $("<" + newType + "/>", attrs).append($(this).contents());
+
+            $(this).replaceWith(newElement);
+
+            newElements.push(newElement);
+        });
+
+        return $(newElements);
+    };
+
+    optionElements = $("option");
+    selectElements = $("select");
+
+
+
+    optionElements.wrap('<li role="presentation"></li>');
+    selectElements.addClass("dropdown-menu").attr("role", "menu");
+    optionElements.attr("role", "menuitem");
+    optionElements.removeAttr("selected");
+    optionElements.attr("href", "#");
+    selectElements.wrap('<div class="dropdown"></div>');
+    selectElements.before('<button class="btn btn-default dropdown-toggle"  type="button" data-toggle="dropdown"></button>');
+    selectElements.changeElementType("ul");
+    optionElements.changeElementType("a");
+
+
+
+
+
 
 
 });
