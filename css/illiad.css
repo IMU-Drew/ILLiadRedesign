@@ -34,7 +34,7 @@ body {
 }
 
 header label {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-left: 2px;
 }
 
@@ -91,11 +91,11 @@ header label {
     border-color: #777777;
 }
 
-/*
-.alert-warning {
-    float: left;
-    width: 500px;
-}*/
+#menuItem {
+    display: none;
+}
+
+
 
 @media(max-width: 768px){
     header input[name="SearchType"], label[for="SearchTypeActive"], label[for="SearchTypeAll"] {
@@ -106,10 +106,10 @@ header label {
     .content-wrap .navbar {
         width: 100%;
     }
-    /*
+
     .alert-warning {
         width: 100%;
-    }*/
+    }
 
     .navbar form {
         box-shadow: none;
@@ -119,10 +119,30 @@ header label {
         width: 100%;
     }
 
+    .nav>li:not(:first-child){
+        display: none;
+    }
+
+    #menuItem {
+        display: block;
+        border-width: 6px;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: lightgrey;
+    }
+
+    #menuButton {
+        background-image: url('../hamburgerIcon.png');
+        background-size: 32px 32px;
+        background-position: 4px 4px;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        font-size: 1.5em;
+    }
+
     nav.navbar {
-        border: 2px solid;
-        border-color: darkgrey;
-        margin: 2px;
         margin-bottom: 5px;
     }
 
