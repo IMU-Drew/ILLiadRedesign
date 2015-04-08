@@ -48,15 +48,13 @@ $(document).ready(function(){
     optionElements = $("option");
     selectElements = $("select");
 
-
-
     optionElements.wrap('<li role="presentation"></li>');
-    selectElements.addClass("dropdown-menu").attr("role", "menu");
-    optionElements.attr("role", "menuitem");
-    optionElements.removeAttr("selected");
-    optionElements.attr("href", "#");
     selectElements.wrap('<div class="dropdown"></div>');
     selectElements.before('<button class="btn btn-default dropdown-toggle"  type="button" data-toggle="dropdown"></button>');
+
+    selectElements.addClass("dropdown-menu").attr("role", "menu");
+    optionElements.attr("role", "menuitem").attr("href", "#").removeAttr("selected");
+
     selectElements.changeElementType("ul");
     optionElements.changeElementType("a");
 
