@@ -24,11 +24,28 @@
 			<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
 				<div class="req"><b>*</b> Indicates required field</div>
 				<fieldset>			
-					<h3>Photocopy Request</h3>
-					<#STATUS>
-					<h2>Describe the item you want</h2>
+					<h2>Article Request</h2>
 
-					<label for="PhotoJournalTitle">
+
+
+
+                    <label for="PhotoArticleAuthor">
+                    <span class="field">
+                        <span class="<#ERROR name="ERRORPhotoArticleAuthor">"><b>Article Author</b></span>
+                        </span>
+                        <input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" tabindex="10" value="<#PARAM name="PhotoArticleAuthor">"><br />
+                    </label>
+
+                        <label for="PhotoArticleTitle">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORPhotoArticleTitle">"><b>Article Title</b></span>
+                            </span>
+                            <textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" tabindex="11"><#PARAM name="PhotoArticleTitle"></textarea><br />
+                        </label>
+
+
+                        <label for="PhotoJournalTitle">
 						<span class="field">
 							<span class="req">*</span>
 							<span class="<#ERROR name="ERRORPhotoJournalTitle">"><b>Title (Journal, Conference Proceedings, Anthology)</b></span><br />
@@ -51,12 +68,12 @@
 						<input id="PhotoJournalIssue" name="PhotoJournalIssue" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="PhotoJournalIssue">"><br />
 				</label>
 
-					<label for="PhotoJournalMonth">
+					<!--<label for="PhotoJournalMonth">
 						<span class="field">
 							<span class="<#ERROR name="ERRORPhotoJournalMonth">"><b>Month</b></span>
 						</span>
 						<input id="PhotoJournalMonth" name="PhotoJournalMonth" type="text" size="40" class="f-name" tabindex="4" value="<#PARAM name="PhotoJournalMonth">"><br />
-				</label>
+				</label>-->
 
 					<label for="PhotoJournalYear">
 						<span class="field">
@@ -82,7 +99,7 @@
 						<input id="ISSN" name="ISSN" type="text" size="20" class="f-name" tabindex="7" value="<#PARAM name="ISSN">"><br />
 				</label>
 
-					<label for="CallNumber">
+					<!--<label for="CallNumber">
 						<span class="field">
 							<span class="<#ERROR name="ERRORCallNumber">"><b>Call Number</b></span>
 						</span>
@@ -96,20 +113,8 @@
 						<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name" tabindex="9" value="<#PARAM name="ESPNumber">"><br />
 				</label>
 
-					<label for="PhotoArticleAuthor">
-						<span class="field">
-							<span class="<#ERROR name="ERRORPhotoArticleAuthor">"><b>Article Author</b></span>
-						</span>
-						<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" tabindex="10" value="<#PARAM name="PhotoArticleAuthor">"><br />
-				</label>
 
-					<label for="PhotoArticleTitle">
-						<span class="field">
-							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORPhotoArticleTitle">"><b>Article Title</b></span>
-						</span>
-						<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" tabindex="11"><#PARAM name="PhotoArticleTitle"></textarea><br />
-				</label>
+
 
 					<label for="NotWantedAfter">
 						<span class="field">
@@ -130,27 +135,27 @@
 							<option>No</option>
 							<option>Yes</option>
 						</select><br />
-				</label>
+				</label>-->
 
 
 
 					<label for="Notes">
 						<span class="field">
 							<span class="<#ERROR name="ERRORNotes">"><b>Notes</b></span><br />
-							<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							<span class="note">Max 255 characters.  Make sure to note if your desired language is other than English, or if you'll accept the resource in a language other than English.  Put any information here that may help us find the item, as well as any other pertinent information.</span>
 						</span>
 						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="15"><#PARAM name="Notes"></textarea><br />
 				</label>
 					
-					<#INCLUDE filename="include_request_cited.html">                
-                    <#INCLUDE filename="include_request_buttons.html">
+					<!--<#INCLUDE filename="include_request_cited.html">
+                    <#INCLUDE filename="include_request_buttons.html">-->
 				</fieldset>
 		</form>		
       	<#INCLUDE filename="include_footer.html">
     </div>    
   </div>
 </div>
-
+<script src="js/showDetailedRequestInfo.js"></script>
 
 </body>
 <script src="js/forms.js"></script>
