@@ -13,7 +13,7 @@
 </head>
 <body id="type-b">
 <div id="wrap">
-  <#INCLUDE filename="include_header_request.html">
+  <#INCLUDE filename="include_header.html">
   <div id="content-wrap">
   	<#INCLUDE filename="include_menu.html">
     <div id="content" class="col-md-6"><div id="status" class="alert alert-warning"><#STATUS></div>
@@ -39,11 +39,20 @@
 				</label>
 						
 					<label for="LoanAuthor">
+                        <span class="req">*</span>
 						<span class="field">
 							<span class="<#ERROR name="ERRORLoanAuthor">"><b>Author</b></span>
 						</span>
 						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="LoanAuthor">"><br />						
 				</label>
+
+                       <label for="LoanDate">
+                           <span class="req">*</span>
+						<span class="field">
+							<span class="<#ERROR name="ERRORLoanDate">"><b>Year</b></span>
+                        </span>
+                        <input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name" tabindex="4" value="<#PARAM name="LoanDate">"><br />
+                        </label>
 					
 					<label for="LoanPublisher">
 						<span class="field">
@@ -51,22 +60,29 @@
 						</span>
 						<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="LoanPublisher">"><br />						
 				</label>
-										
-					<label for="LoanDate">
+
+
+
+                        <label for="LoanEdition">
 						<span class="field">
-							<span class="<#ERROR name="ERRORLoanDate">"><b>Year</b></span>
-						</span>
-						<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name" tabindex="4" value="<#PARAM name="LoanDate">"><br />						
-				</label>
-					
-					<label for="LoanEdition">
+							<span class="<#ERROR name="ERRORLoanEdition">"><b>Thesis or Dissertation</b></span>
+                            </span>
+                            <select name="LoanEdition" id="LoanEdition">
+                                <option selected=""></option>
+                                <option>Thesis</option>
+                                <option>Dissertation</option>
+                            </select><br>
+                        </label>
+
+                        <label for="Notes">
 						<span class="field">
-							<span class="<#ERROR name="ERRORLoanEdition">"><b>Degree</b></span>
-						</span>
-						<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name" tabindex="5" value="<#PARAM name="LoanEdition">"><br />						
-				</label>
+							<span class="<#ERROR name="ERRORNotes">"><b>Notes</b></span><br />
+                            <span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+                            </span>
+                            <textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="11"><#PARAM name="Notes"></textarea><br />
+                        </label>
 					
-					<label for="CallNumber">
+					<!--<label for="CallNumber">
 						<span class="field">
 							<span class="<#ERROR name="ERRORCallNumber">"><b>Call Number</b></span>
 						</span>
@@ -103,15 +119,9 @@
 					
 					
 					
-					<label for="Notes">
-						<span class="field">
-							<span class="<#ERROR name="ERRORNotes">"><b>Notes</b></span><br />
-							<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
-						</span>
-						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="11"><#PARAM name="Notes"></textarea><br />
-				</label>
+
 					
-					<#INCLUDE filename="include_request_cited.html">                
+					<#INCLUDE filename="include_request_cited.html">    -->
                     <#INCLUDE filename="include_request_buttons.html">
 				</fieldset>
 		</form>
