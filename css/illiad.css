@@ -104,6 +104,13 @@ button.dropdown-toggle {
     display: none;
 }
 
+#itemDropdown {
+    margin-left: 10px;
+    background-color: white;
+    border: none;
+    color: #993333;
+}
+
 
 
 @media(max-width: 768px){

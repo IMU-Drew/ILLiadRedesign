@@ -16,18 +16,20 @@
 <body id="type-c" >
 <div id="wrap">
 	<#INCLUDE filename="include_header.html">
-    <div id="content-wrap">
+    <div id="content-wrap" class="row">
         <#INCLUDE filename="include_menu.html">
-        <div id="content" class="col-md-6">
+        <div id="content" class="col-md-7">
 
             <div class="default-table">
                 <#TABLE name="ViewOutstandingRequests" headerText="Outstanding Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+                <#TABLE name="ViewRenewCheckedOutItems" headerText="Checked Out Items" noDataAction="ShowMessageRow" noDataMessage="No Items">
+                <#TABLE name="ElectronicDelivery" headerText="Electronically Received Articles" column="TransactionNumber:Transaction" column="View" column="Size" column="Title" column="Author" column="Expires" column="Delete">
             </div>
             <#INCLUDE filename="include_footer.html">
         </div>
         <div class="col-md-3">
             <#ALERTS>
-            Get email notifications and alerts straight to your RSS reader by subscribing to our <a href="<#ACTION action="2" type="40" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">">alerts feed.</a><br />
+            Get email notifications and alerts on your RSS reader by subscribing to our <a href="<#ACTION action="2" type="40" value="RSSID" valueType="lookup" absolutePath="false" includeSessionID="false">">alerts feed.</a><br />
 		</div>
     </div>
 
