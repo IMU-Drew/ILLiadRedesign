@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>ILLiad - Photocopy Request</title>
+<title>ILLiad - Article Request</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/illiad.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
@@ -48,7 +48,7 @@
                         <label for="PhotoJournalTitle">
 						<span class="field">
 							<span class="req">*</span>
-							<span class="<#ERROR name="ERRORPhotoJournalTitle">"><b>Title (Journal, Conference Proceedings, Anthology)</b></span><br />
+							<span class="<#ERROR name="ERRORPhotoJournalTitle">"><b>Journal Title</b></span><br />
 							<span class="note">Please do not abbreviate unless your citation is abbreviated</span>
 						</span>
 						<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name" tabindex="1"><#PARAM name="PhotoJournalTitle"></textarea><br />
@@ -56,14 +56,14 @@
 
 					<label for="PhotoJournalVolume">
 						<span class="field">
-							<span class="<#ERROR name="ERRORPhotoJournalVolume">"><b>Volume</b></span>
+							<span class="<#ERROR name="ERRORPhotoJournalVolume">"><b>Journal Volume</b></span>
 						</span>
 						<input id="PhotoJournalVolume" name="PhotoJournalVolume" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="PhotoJournalVolume">"><br />
 				</label>
 
 					<label for="PhotoJournalIssue">
 						<span class="field">
-							<span class="<#ERROR name="ERRORPhotoJournalIssue">"><b>Issue Number or Designation</b></span>
+							<span class="<#ERROR name="ERRORPhotoJournalIssue">"><b>Journal Issue</b></span>
 						</span>
 						<input id="PhotoJournalIssue" name="PhotoJournalIssue" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="PhotoJournalIssue">"><br />
 				</label>
@@ -93,7 +93,7 @@
 
 					<label for="ISSN">
 						<span class="field">
-							<span class="<#ERROR name="ERRORISSN">"><b>ISSN/ISBN (International Standard Serial/Book Number)</b></span><br />
+							<span class="<#ERROR name="ERRORISSN">"><b>ISSN (International Standard Serial Number)</b></span><br />
 							<span class="note">If given will speed request processing</span>
 						</span>
 						<input id="ISSN" name="ISSN" type="text" size="20" class="f-name" tabindex="7" value="<#PARAM name="ISSN">"><br />
@@ -142,7 +142,12 @@
 					<label for="Notes">
 						<span class="field">
 							<span class="<#ERROR name="ERRORNotes">"><b>Notes</b></span><br />
-							<span class="note">Max 255 characters.  Make sure to note if your desired language is other than English, or if you'll accept the resource in a language other than English.  Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							<span class="note">
+                                <ul>
+                                    <li>Include any information here that may help us find the item, as well as any other pertinent information.</li>
+                                    <li>If your desired language is other than English, or if you'll accept the resource in a language other than English, specify that here.</li>
+                                    <li>Max 255 characters.</li>
+                                </ul>
 						</span>
 						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="15"><#PARAM name="Notes"></textarea><br />
 				</label>

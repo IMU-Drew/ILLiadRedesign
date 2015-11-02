@@ -111,6 +111,35 @@ button.dropdown-toggle {
     color: #993333;
 }
 
+.f-submit-wrap {
+    margin-top: 20px;
+}
+
+#toggleInformation {
+    margin-bottom: 10px;
+    display: block;
+}
+
+nav li h4 {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #993333;
+}
+
+#content-wrap {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+table {
+    margin: 50px 10px;
+}
+
+table:first-child {
+    margin-top: 10px;
+}
+
 
 
 @media(max-width: 768px){
@@ -162,9 +191,5 @@ button.dropdown-toggle {
         margin-bottom: 5px;
     }
 
-    input[name="SubmitButton"]{
-        width: 50%;
-        float: right;
-        margin-top: 1%;
-    }
+
 }

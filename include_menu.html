@@ -1,9 +1,9 @@
 <nav class="navbar col-md-2">
 	<ul id="nav" class="nav nav-submenu">
         <li id="menuItem"><a href="#" id="menuButton">Menu</a></li>
-		<li><a href="<#ACTION action="99">">Logoff <#PARAM name="Username"></a></li>
-		<li><a href="<#ACTION action="10" form="10">">Main Menu</a></li>
-		<li><a href="#">New Request</a>
+		<li><h4><a href="<#ACTION action="99">">Logoff <#PARAM name="Username"></a></#PARAM></h4></li>
+		<li><h4><a href="<#ACTION action="10" form="10">">Current Requests</a></h4></li>
+		<li><h4>New Request</h4>
 			<ul>
 				<li class="first"><a href="<#ACTION action="10" form="22">">Article</a></li>
 				<li><a href="<#ACTION action="10" form="21">">Book</a></li>
@@ -14,16 +14,16 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dLabel">
                         <li class="first"><a href="<#ACTION action="10" form="23">">Book Chapter</a></li>
-                        <li><a href="<#ACTION action="10" form="64">">Media Item</a></li>
+                        <li><a href="<#ACTION action="10" form="20" value="GenericRequestMediaItem">">Media Item</a></li>
                         <li><a href="<#ACTION action="10" form="24">">Conference Paper</a></li>
                         <li><a href="<#ACTION action="10" form="27">">Thesis</a></li>
-                        <li><a href="<#ACTION action="10" form="68">">Newspaper or Microfilm</a></li>
-                        <li class="last"><a href="<#ACTION action="10" form="73">">Music Score</a></li>
+                        <li><a href="<#ACTION action="10" form="20" value="GenericRequestNewspaperMicrofilm">">Newspaper or Microfilm</a></li>
+                        <li class="last"><a href="<#ACTION action="10" form="20" value="GenericRequestMusicScore">">Music Score</a></li>
                     </ul>
                 </div>
 			</ul>
 		</li>
-		<li><a href="#">View</a>
+		<li><h4>View</h4>
             <ul>
                 <li><a href="<#ACTION action="10" form="70">">Cancelled Requests</a></li>
                 <li><a href="<#ACTION action="10" form="68">">History Requests</a></li>
@@ -33,13 +33,12 @@
 
 
 		</li>
-		<li><a href="#">Tools</a>
-			<ul>
-				<li class="first"><a href="<#ACTION action="10" form="81">">User Information</a></li>
+
+
+				<li class="first"><h4><a href="<#ACTION action="10" form="81">">User Information</a></h4></li>
 
 				<!--<li class="last"><a href="<#ACTION action="10" form="83">">Change Password</a></li>-->
-			</ul>
-		</li>
-		<li><a href="<#ACTION action="10" form="1">">About ILLiad</a></li>
+
+		<li><h4><a href="<#ACTION action="10" form="1">">About ILLiad</a></h4></li>
 	</ul>
 </nav>
