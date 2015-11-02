@@ -1,4 +1,7 @@
 
+h1 {
+    font-size: 32px;
+}
 
 .jumbotron-head {
     background-color: #993333;
@@ -7,8 +10,8 @@
 
 header {
     height: auto;
-    padding: 10px;
-    background-color: rgb(153, 51, 51);
+    padding: 10px 10px 0 10px;
+    background-color: #000066;
     color: white;
 
 }
@@ -22,13 +25,17 @@ header input[type="radio"]{
 }
 
 .req {
-    color: #c00;
     font-size: 150%;
     font-weight: bold;
     line-height: 1em;
-
+    color: #c00;
 }
 
+.requiredText {
+    color: #c00;
+    position: absolute;
+    right: 0;
+}
 
 input[name="SubmitButton"] {
     color: black;
@@ -78,7 +85,7 @@ button.dropdown-toggle {
     display: block;
 }
 .nav-submenu > li > ul {
-
+    padding-left: 20px;
 }
 .nav-submenu > li > ul > li > a,
 .nav-submenu > li > ul > li a:hover {
@@ -98,6 +105,10 @@ button.dropdown-toggle {
 .nav-submenu > li > ul > li:hover a:focus,
 .nav-submenu > li > ul > li:focus a:focus {
     border-color: #777777;
+}
+
+.nav-submenu > li > ul > li:first-child{
+    margin-top: 10px;
 }
 
 #menuItem {
@@ -120,11 +131,23 @@ button.dropdown-toggle {
     display: block;
 }
 
-nav li h4 {
+.nav > li {
     position: relative;
     display: block;
-    padding: 10px 15px;
+    margin: 30px 0 0 0;
     color: #993333;
+}
+
+nav .fa {
+    color: #666;
+    font-size: 14pt;
+    top: 0em; /*prob temporary bandaid, unfortunately! */
+}
+
+
+
+nav h4 {
+    margin: 0px;
 }
 
 #content-wrap {

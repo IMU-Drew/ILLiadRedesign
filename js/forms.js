@@ -58,8 +58,16 @@ $(document).ready(function(){
     selectElements.changeElementType("ul");
     optionElements.changeElementType("a");
 
+    /*
+    var errors = $('.statusError');
+    if (errors.length == 0)
+    {
+        var status = $('#status');
+        if (status) {
+            $('#status').hide();
+        }
 
-
+    }*/
 
 
 

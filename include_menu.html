@@ -1,9 +1,8 @@
 <nav class="navbar col-md-2">
-	<ul id="nav" class="nav nav-submenu">
+	<ul id="nav" class="nav nav-submenu fa-ul">
         <li id="menuItem"><a href="#" id="menuButton">Menu</a></li>
-		<li><h4><a href="<#ACTION action="99">">Logoff <#PARAM name="Username"></a></#PARAM></h4></li>
-		<li><h4><a href="<#ACTION action="10" form="10">">Current Requests</a></h4></li>
-		<li><h4>New Request</h4>
+		<li><i class="fa fa-li fa-logoff"></i><h4><a href="<#ACTION action="99">">Logoff <#PARAM name="Username"></a></#PARAM></h4></li>
+		<li><i class="fa fa-li fa-exclamation"></i><h4>New Request</h4>
 			<ul>
 				<li class="first"><a href="<#ACTION action="10" form="22">">Article</a></li>
 				<li><a href="<#ACTION action="10" form="21">">Book</a></li>
@@ -23,22 +22,23 @@
                 </div>
 			</ul>
 		</li>
-		<li><h4>View</h4>
+        <li><i class="fa fa-li fa-list"></i><h4><a href="<#ACTION action="10" form="10">">Current Requests</a></h4></li>
+		<li><i class="fa fa-li fa-user"></i><h4>Account Information</h4>
             <ul>
                 <li><a href="<#ACTION action="10" form="70">">Cancelled Requests</a></li>
                 <li><a href="<#ACTION action="10" form="68">">History Requests</a></li>
-                <li><a href="<#ACTION action="10" form="60">">All Requests</a></li>
-                <li class="last"><a href="<#ACTION action="10" form="73">">Notifications!</a></li>
+                <li><a href="<#ACTION action="10" form="81">">User Information</a></li>
+                <li><a href="<#ACTION action="10" form="73">">Notifications</a></li>
             </ul>
 
 
 		</li>
 
 
-				<li class="first"><h4><a href="<#ACTION action="10" form="81">">User Information</a></h4></li>
+
 
 				<!--<li class="last"><a href="<#ACTION action="10" form="83">">Change Password</a></li>-->
 
-		<li><h4><a href="<#ACTION action="10" form="1">">About ILLiad</a></h4></li>
+		<li><i class="fa fa-li fa-info"></i><h4><a href="https://www.lib.ua.edu/using-the-library/interlibrary-loan/">About Interlibrary Loan</a></h4></li>
 	</ul>
 </nav>
