@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>ILLiad - Media Item Request</title>
+<title>ILLiad - Edit Media Item Request</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/illiad.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
@@ -17,16 +17,18 @@
   <div id="content-wrap">
   	<#INCLUDE filename="include_menu.html">
     <div id="content" class="col-md-6"><div id="status" class="alert alert-warning"><#STATUS></div>
-		<form action="illiad.dll" method="post" name="GenericRequestMediaItem" class="f-wrap-request">
-			<input type="hidden" name="ILLiadForm" value="GenericRequestMediaItem">
+		<form action="illiad.dll" method="post" name="EditGenericRequestMediaItem" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="EditGenericRequestMediaItem">
 			<input type="hidden" name="RequestType" value="Loan">
 			<input type="hidden" name="Username" value="<#PARAM name="Username">">
 			<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+            <input type="hidden" name="TransactionNumber" value="<#PARAM name="TransactionNumber">">
+            <!--TODO:-->
             <input type="hidden" name="DocumentType" value="Media Item">
 						
 				<div class="req"><b>*</b> Indicates required field</div>
 				<fieldset>			
-					<h3>Media Item Request</h3>
+					<h3>Edit Media Item Request</h3>
 
 					
 					<label for="LoanTitle">

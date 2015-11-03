@@ -17,13 +17,12 @@
   <div id="content-wrap">
   	<#INCLUDE filename="include_menu.html">
     <div id="content" class="col-md-6"><div id="status" class="alert alert-warning"><#STATUS></div>
-		<form action="illiad.dll" method="post" name="ThesisRequest" class="f-wrap-request">
-			<input type="hidden" name="ILLiadForm" value="GenericRequestMediaItem">
+		<form action="illiad.dll" method="post" name="GenericRequestMusicScore" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="GenericRequestMediaScore">
 			<input type="hidden" name="RequestType" value="Loan">
 			<input type="hidden" name="Username" value="<#PARAM name="Username">">
 			<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-            <!--TODO:-->
-            <input type="hidden" name="DocumentType" value="??">
+            <input type="hidden" name="DocumentType" value="Music Score">
 						
 				<div class="req"><b>*</b> Indicates required field</div>
 				<fieldset>			

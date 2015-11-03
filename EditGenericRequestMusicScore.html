@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>ILLiad - Media Item Request</title>
+<title>ILLiad - Edit Music Score Request</title>
 <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/illiad.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
@@ -17,17 +17,20 @@
   <div id="content-wrap">
   	<#INCLUDE filename="include_menu.html">
     <div id="content" class="col-md-6"><div id="status" class="alert alert-warning"><#STATUS></div>
-		<form action="illiad.dll" method="post" name="GenericRequestMediaItem" class="f-wrap-request">
-			<input type="hidden" name="ILLiadForm" value="GenericRequestMediaItem">
+		<form action="illiad.dll" method="post" name="EditGenericRequestMusicScore" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="EditGenericRequestMediaScore">
 			<input type="hidden" name="RequestType" value="Loan">
 			<input type="hidden" name="Username" value="<#PARAM name="Username">">
 			<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
-            <input type="hidden" name="DocumentType" value="Media Item">
+            <input type="hidden" name="TransactionNumber" value="<#PARAM name="TransactionNumber">">
+            <!--TODO:-->
+            <input type="hidden" name="DocumentType" value="Music Score">
 						
 				<div class="req"><b>*</b> Indicates required field</div>
 				<fieldset>			
-					<h3>Media Item Request</h3>
+					<h3>Music Score Request</h3>
 
+					<h2>Describe the item you want</h2>
 					
 					<label for="LoanTitle">
 						<span class="field">
@@ -40,7 +43,7 @@
 						
 					<label for="LoanAuthor">
 						<span class="field">
-							<span class="<#ERROR name="ERRORLoanAuthor">"><b>Author/Editors</b></span>
+							<span class="<#ERROR name="ERRORLoanAuthor">"><b>Compose/Editor/Arranger/Transcriber</b></span>
 						</span>
 						<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="LoanAuthor">"><br />						
 				</label>
@@ -49,23 +52,14 @@
                         <label for="LoanEdition">
 						<span class="field">
                             <span class="req">*</span>
-							<span class="<#ERROR name="ERRORLoanEdition">"><b>Media Type</b></span>
+							<span class="<#ERROR name="ERRORLoanEdition">"><b>Instrumentation</b></span>
                             </span>
-                        <select tabindex="3" name="LoanEdition">
-
-                            <option selected=""></option>
-                            <option>CD</option>
-                            <option>Cassette</option>
-                            <option>LP</option>
-                            <option>DVD</option>
-                            <option>VHS</option>
-                            <option>Other (specify in Notes field below )</option>
-                        </select>
+                            <input id="LoanEditor" name="LoanEditor" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="LoanEditor">"><br />
                         </label>
 
                         <label for="LoanDate">
 						<span class="field">
-							<span class="<#ERROR name="ERRORLoanDate">"><b>Date</b></span>
+							<span class="<#ERROR name="ERRORLoanDate">"><b>Date of Publication</b></span>
                             </span>
                             <input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name" tabindex="4" value="<#PARAM name="LoanDate">"><br />
                         </label>
@@ -90,15 +84,15 @@
 
                             <label for="ISSN">
                                 <span class="field">
-                                    <span class="<#ERROR name="ERRORISSN">"><b>ISSN</b></span><br />
-                            <span class="note">If given, will speed up request proceeding.</span>
-                            </span>
+                                    <span class="<#ERROR name="ERRORISSN">"><b>ISMN</b></span><br />
+                                    <span class="note">If given, will speed up request proceeding.</span>
+                                </span>
                             <input id="ISSN" name="ISSN" rows="2" cols="40" class="f-name" tabindex="11"><#PARAM name="ISSN"></input><br />
                         </label>
 
                             <label for="LoanPublisher">
-						<span class="field">
-                			<span class="<#ERROR name="ERRORLoanPublisher">"><b>Publisher</b></span>
+                                <span class="field">
+                                    <span class="<#ERROR name="ERRORLoanPublisher">"><b>Publisher</b></span>
                                 </span>
                                 <input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="LoanPublisher">"><br />
                             </label>
@@ -110,12 +104,7 @@
                                 <input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="LoanPlace">"><br />
                             </label>
 
-                            <label for="LoanDate">
-						<span class="field">
-                			<span class="<#ERROR name="ERRORLoanDate">"><b>Date of Publication</b></span>
-                                </span>
-                                <input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="LoanDate">"><br />
-                            </label>
+
 
 
 
